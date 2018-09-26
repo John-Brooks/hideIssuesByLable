@@ -1,13 +1,11 @@
 // ==UserScript==
 // @name         Hide by tags
-// @namespace    http://babanin.de/
-// @version      0.8
-// @description  try to take over the world! and hide gitlab issues by tags
-// @author       Daniil Babanin
-// @homepageURL  https://github.com/DaniilBabanin/hideIssuesByTag
-// @supportURL   https://github.com/DaniilBabanin/hideIssuesByTag/issues
-// @match        https://gitlab.com/*/*/issues*
-// @match        https://gitlab.com/*/issues*
+// @version      1.0
+// @description  hides in review items in issues list
+// @author       OG:Daniil Babanin, forked by: John Brooks
+// @homepageURL  https://github.com/John-Brooks/hideIssuesByLable
+// @match        http://lustra/*/*/issues*
+// @match        http://lustra/*/issues*
 // @grant        none
 // @license      MIT
 // ==/UserScript==
@@ -18,15 +16,7 @@
 function hideGitlabTags() {
   'use strict';
   var opacityLables = [
-    'Ready for(.*)Test',
-    'Ready for Release',
-    'Blocked',
-    'Concept',
-    'Draft',
-    'won\'t fix',
-    'Suggestion',
-    'Input Needed',
-    'Ready for Release'
+    'in review',
   ];
   var ignoreLables = [
   ];
